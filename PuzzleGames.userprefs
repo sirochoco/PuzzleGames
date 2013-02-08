@@ -1,9 +1,11 @@
 ﻿<Properties>
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\Script\WallGenerator.js">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\Script\DroppingBlockBlock.js">
     <Files>
-      <File FileName="Assets\Script\CellUnitMove.js" Line="48" Column="27" />
-      <File FileName="Assets\Script\WallGenerator.js" Line="18" Column="30" />
+      <File FileName="Assets\Script\CellUnitMove.js" Line="37" Column="1" />
+      <File FileName="Assets\Script\WallGenerator.js" Line="1" Column="1" />
+      <File FileName="Assets\Script\DroppingBlockStage.js" Line="39" Column="2" />
+      <File FileName="Assets\Script\DroppingBlockBlock.js" Line="44" Column="53" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.Breakpoints>

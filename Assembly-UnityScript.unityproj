@@ -47,6 +47,8 @@
      <Compile Include="Assets\Resources\ChangeTexture.js" />
      <Compile Include="Assets\Script\CellUnitMove.js" />
      <Compile Include="Assets\Script\ChangeAmin.js" />
+     <Compile Include="Assets\Script\DroppingBlockBlock.js" />
+     <Compile Include="Assets\Script\DroppingBlockStage.js" />
      <Compile Include="Assets\Script\Lemmings.js" />
      <Compile Include="Assets\Script\Placement.js" />
      <Compile Include="Assets\Script\PlaySound.js" />
