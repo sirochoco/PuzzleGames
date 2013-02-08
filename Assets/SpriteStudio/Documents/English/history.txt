@@ -1,0 +1,35 @@
+﻿=============================================================================
+ SpriteStudioPlayer for Unity
+
+  Releasae notes
+
+ Copyright(C) 2003-2012 Web Technology Corp. All rights reserved.
+=============================================================================
+
+[Ver.1.15] (2012/12/12)
+
+  - Support for Unity 4
+
+[Ver.1.14] (2012/08/08)
+  
+  - Delete materials created in "SsPart.IndividualizeMaterial()", when call
+    "RevertChangedMaterial" and "Destructing SsSprite". 
+
+  - Append Function "GetParts" for "Getting parts-array" in SsSprite
+
+[Ver.1.13] (2012/06/27)
+
+  Initial release on Unity Asset Store.
+
+=============================================================================
+Web Technology Corp.
+http://www.webtech.co.jp/eng/
+Copyright(C) 2003-2012 Web Technology Corp.
+=============================================================================
+
+* 'SpriteStudio' and 'Web Technology' are registered trademarks of
+  Web Technology Corp.
+* All other trademarks and registered trademarks are the sole property of
+  their respective owners.
+
+[End of TEXT]
