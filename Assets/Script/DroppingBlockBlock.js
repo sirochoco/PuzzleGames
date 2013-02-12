@@ -1,11 +1,11 @@
 @script RequireComponent(DroppingBlockStage);
 
 var blockPrefab:GameObject;
-var blockArray:Array;
+var blockArray:Array;//ブロックの配列
 var cell : int = 64;//セルのサイズ
 var cellXSize:int=4;
 var cellYSize:int=4;
-var moveTime : float = 1;//アニメーション完了までの秒数
+var moveTime : float = 0;//アニメーション完了までの秒数
 var px : int = 5;//移動先
 var py : int = 9;
 
@@ -61,10 +61,44 @@ blockArray=[
 }
 
 function Update () {
-				px += vx;
-				py += vy;
-				vy-=1;	
+
+		//落下タイマーの更新
+		dropTime++;
+		
+		//レバーを下に入力するか、落下タイマーが一定値に達したら、ブロックを落下させる
+if (dropTime>=120) {
+	//移動方向の設定
+				if(Input.GetKey("left"))vx=-1;
+			else if (Input.GetKey("right")) vx = 1;
+			
+				//キー入力された場合の処理
+				if(vx!=0||vy!=0){
+					if(dbc.wallArray[py+vy][px+vx]==0){
+						px += vx;
+						py += vy;
+							
+	if(state == "stop"){	
+		if(dbc.wallArray[py-1][px]==0){
+			py-=1;
+			state="move";
+			timer=moveTime;
+			}
+		}
+	}
+	}
+}
+
+if(state=="move"){
+	timer -= Time.deltaTime;
 	iTween.MoveTo(currentBlock, {"x":px*cell, "y":py*cell, "time":moveTime+0.1});
+	
+			//タイマーが0以下になったらステータス変更
+		if (timer <= 0.0) {
+			vx = vy = 0;
+			state = "stop";
+			}
+}
+		
 
 Debug.Log(px+","+py);
 //入力状態での処理
