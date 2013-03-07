@@ -80,9 +80,9 @@
 			<TransBlendType>0</TransBlendType>
 			<PictArea>
 				<Top>1024</Top>
-				<Left>1536</Left>
+				<Left>1792</Left>
 				<Bottom>1280</Bottom>
-				<Right>1792</Right>
+				<Right>2048</Right>
 			</PictArea>
 			<OriginX>128</OriginX>
 			<OriginY>128</OriginY>

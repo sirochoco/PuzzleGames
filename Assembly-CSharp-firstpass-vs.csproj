@@ -37,14 +37,19 @@
     <Reference Include="System.XML" />
 	<Reference Include="System.Core" />
 	<Reference Include="UnityEngine">
-	  <HintPath>C:/Program Files/Unity/Editor/Data/Managed/UnityEngine.dll</HintPath>
+	  <HintPath>/Applications/Unity/Unity.app/Contents/Frameworks/Managed/UnityEngine.dll</HintPath>
 	</Reference>
 	<Reference Include="UnityEditor">
-	  <HintPath>C:/Program Files/Unity/Editor/Data/Managed/UnityEditor.dll</HintPath>
+	  <HintPath>/Applications/Unity/Unity.app/Contents/Frameworks/Managed/UnityEditor.dll</HintPath>
 	</Reference>
   </ItemGroup>
   <ItemGroup>
+     <Compile Include="Assets\Plugins\Helper Classes\EventParamMappings.cs" />
+     <Compile Include="Assets\Plugins\Helper Classes\Vector3OrTransform.cs" />
+     <Compile Include="Assets\Plugins\Helper Classes\Vector3OrTransformArray.cs" />
      <Compile Include="Assets\Plugins\iTween.cs" />
+     <Compile Include="Assets\Plugins\iTweenEvent.cs" />
+     <Compile Include="Assets\Plugins\iTweenPath.cs" />
      <None Include="Assets\Standard Assets (Mobile)\Shaders\Particle Shaders\Mobile Multiply Culled.shader" />
      <None Include="Assets\SpriteStudio\Shaders\_SsSubColorMixAlpha.shader" />
      <None Include="Assets\Standard Assets (Mobile)\Shaders\Miscellaneous Shaders\Mobile Background.shader" />
@@ -61,7 +66,6 @@
      <None Include="Assets\SpriteStudio\Shaders\_SsSubColorNonAlphaMulMatCol.shader" />
      <None Include="Assets\SpriteStudio\Shaders\_SsMulColorNonAlphaMulMatCol.shader" />
      <None Include="Assets\SpriteStudio\Documents\Japanese\usage.txt" />
-     <None Include="Assets\iTween\ReadMe!\ReadMe!.txt" />
      <None Include="Assets\SpriteStudio\Documents\English\history.txt" />
      <None Include="Assets\Standard Assets (Mobile)\Shaders\Miscellaneous Shaders\Mobile Detail.shader" />
      <None Include="Assets\SpriteStudio\Documents\Japanese\readme.txt" />
@@ -76,6 +80,7 @@
      <None Include="Assets\SpriteStudio\Documents\Japanese\script.txt" />
      <None Include="Assets\SpriteStudio\Shaders\_SsNonColorMulAlphaMulMatCol.shader" />
      <None Include="Assets\SpriteStudio\Shaders\_SsMulColorMixAlpha.shader" />
+     <None Include="Assets\iTweenEditor\README.txt" />
      <None Include="Assets\SpriteStudio\Shaders\_SsAddColorMulAlpha.shader" />
      <None Include="Assets\SpriteStudio\Shaders\_SsMulColorMixAlphaMulMatCol.shader" />
      <None Include="Assets\SpriteStudio\Shaders\_SsAddColorMixAlpha.shader" />
