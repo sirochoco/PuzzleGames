@@ -54,6 +54,8 @@
      <Compile Include="Assets\Script\ConnectedRail.js" />
      <Compile Include="Assets\Script\DroppingBlockBlock.js" />
      <Compile Include="Assets\Script\DroppingBlockStage.js" />
+     <Compile Include="Assets\Script\Enemy.js" />
+     <Compile Include="Assets\Script\EnemyGenarater.js" />
      <Compile Include="Assets\Script\Lemmings.js" />
      <Compile Include="Assets\Script\Placement.js" />
      <Compile Include="Assets\Script\PlaySound.js" />

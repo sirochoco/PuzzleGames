@@ -6,12 +6,13 @@ var BallOnRaileErase:int=3;//いくつ揃ったら消すか
 
 var ballPrefabs:GameObject[];
 var ballArray:Array;//ボールの配列
-var index:int;//ballArrayのインデックス
-var type:int;//生成されるボールの種類
+var ballIndex:int;
+var ballPos:int;
+var ballPos0:int;
+var ballType:int;//生成されるボールの種類
 private var ball:GameObject;//インスタンス生成されたボール
 private var startPosition:Vector3;//パスの出発点の座標
 
-var pathPercent:float=0.0f;
 
 function Start () {
 BallOnRailType=ballPrefabs.length;
@@ -24,39 +25,44 @@ startPosition=GameObject.Find("Rail").GetComponent.<iTweenPath>().nodes[0];
 
 function Update () {
 	if(Input.GetButtonDown("Fire1")){
-		type=Random.Range(0,BallOnRailType);
-		AddBall(type);
+		ballType=Random.Range(0,BallOnRailType);
+		AddBall(ballType);
 	}
-	
-	iTween.PutOnPath(ball,iTweenPath.GetPath("RailPath"),pathPercent/100);
-	var ballPoint:Vector3=iTween.PointOnPath(iTweenPath.GetPath("RailPath"),pathPercent/100);
-	pathPercent+=0.05f;
-	print(ballPoint);	
+	if(ball.GetComponent.<Ball>().index==0){
+		ballPos0=ball.GetComponent.<Ball>().pos;
+		print(ballPos0);
+	}
+	//ボールが最大数に達していない、かつパス上のボールの数が０か、スタートから一番近いボールまでの距離がボール一個以上ならば、新しいボールをスタートに生成する
+	if ((ballArray.length==0||ballPos0>=1) && ballArray.length<BallOnRailCount){
+		ballType=Random.Range(0,BallOnRailType);
+		
+			if(ballArray.length>=BallOnRaileErase-1){
+				//for(var i=0;i<BallOnRaileErase-1;i++){
+					//if()
+				//}
+			}
+		AddBall(ballType);
+	}	
 }
 
-function AddBall(type){
-
-	if(ballArray.length<BallOnRailCount){
+function AddBall(ballType){
 		//ballインスタンスをパスの出発点に生成
-		ball=Instantiate(ballPrefabs[type],startPosition,Quaternion.identity);
-		ballArray.Splice(index,0,ball);
-		//ballArray.Push(ball);		
-
-	}
-	//iTween.MoveTo(ball,iTween.Hash("path",movePath,"time",10,"EaseType",iTween.EaseType.easeOutSine));
-	//iTween.MoveTo(ball,iTween.Hash("path",iTweenPath.GetPath("RailPath"),"time",10,"EaseType",iTween.EaseType.easeOutSine));
+	ball=Instantiate(ballPrefabs[ballType],startPosition,Quaternion.identity);
+	ball.GetComponent.<Ball>().type=ballType;
+	//ballArray.Splice(i,0,ball);
+		ballArray.Push(ball);
 }
+
 //衝突したときの処理
-function HitBall(){
+function HitBall(index){
 //ballのインデックスを取得
 	for(var i=0;i<ballArray.length;i++){
-	ballArray[i];
-	index=i;
-	}
-	print(index);
+			ballArray[i];
+			ball.GetComponent.<Ball>().index=i;
+		}
 	if(index==3){
 	//指定したインデックスのボールを配列から削除する
-	ballArray.RemoveAt(index);
+	ballArray.RemoveAt(ballIndex);
 	//消去のSendMessage
 	ball.SendMessage("EraseBall");
 	}

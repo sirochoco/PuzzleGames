@@ -1,11 +1,11 @@
 ﻿<Properties>
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/Script/BallManager.js">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/Script/EnemyGenarater.js">
     <Files>
-      <File FileName="Assets/Script/BallManager.js" Line="21" Column="17" />
-      <File FileName="Assets/Script/ArrayTest.js" Line="16" Column="44" />
-      <File FileName="Assets/Script/Ball.js" Line="19" Column="15" />
-      <File FileName="Assets/Plugins/iTweenPath.cs" Line="23" Column="49" />
+      <File FileName="Assets/Script/BallManager.js" Line="50" Column="76" />
+      <File FileName="Assets/Script/ArrayTest.js" Line="1" Column="1" />
+      <File FileName="Assets/Script/Ball.js" Line="26" Column="48" />
+      <File FileName="Assets/Script/EnemyGenarater.js" Line="13" Column="23" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
