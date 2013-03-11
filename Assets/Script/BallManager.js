@@ -6,7 +6,7 @@ var BallOnRaileErase:int=3;//いくつ揃ったら消すか
 
 var ballPrefabs:GameObject[];
 var ballArray:Array;//ボールの配列
-var ballIndex:int;
+//var ballIndex:int;
 var ballPos:int;
 var ballPos0:int;
 var ballType:int;//生成されるボールの種類
