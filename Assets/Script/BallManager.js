@@ -13,6 +13,8 @@ var pos:int;//ボールの直径を1とした時のパス上での並び（位�
 var type0:int;//パス上のボール配列が0の時の値
 var pos0:int;//パス上のボール配列が0の時の値
 
+var cannon:GameObject;
+
 private var startPosition:Vector3;//パスの出発点の座標
 
 function Start () {
@@ -21,13 +23,12 @@ function Start () {
 	//パスの開始点の座標を取得する
 	startPosition=GameObject.Find("Rail").GetComponent.<iTweenPath>().nodes[0];
 	AddBall();
+	
+	cannon=GameObject.Find("Cannon");
 }
 
 function Update () {
-	if(Input.GetButtonDown("Fire1")){
-	//type=Random.Range(0,ballPrefabs.length);	
-		//AddBall();
-	}
+
 	//スタートから一番近いボールの種類を取得（ビルトイン配列要素からは直接GetComponentできるのね）
 	type0=ballBuiltin[0].GetComponent.<Ball>().ballType;
 	//スタートから一番近いボールまでの位置を取得
@@ -57,6 +58,7 @@ function Update () {
 			AddBall();
 	}
 
+
 //パス上で規定以上のボールが並んだら、ボールを消す
 	for(i=0;i<ballBuiltin.length;i++){
 	//同じ種類のボールが規定数以上並んでいるかを調べる
@@ -80,6 +82,7 @@ function Update () {
 		}
 	}
 }
+
 
 function AddBall(){
 	//ビルトイン配列をJS配列に変換

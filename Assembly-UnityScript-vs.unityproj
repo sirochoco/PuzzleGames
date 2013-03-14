@@ -48,6 +48,7 @@
      <Compile Include="Assets\Script\ArrayTest.js" />
      <Compile Include="Assets\Script\Ball.js" />
      <Compile Include="Assets\Script\BallManager.js" />
+     <Compile Include="Assets\Script\Cannon.js" />
      <Compile Include="Assets\Script\CellUnitGravity.js" />
      <Compile Include="Assets\Script\CellUnitMove.js" />
      <Compile Include="Assets\Script\ChangeAmin.js" />
