@@ -36,6 +36,7 @@ function OnGUI(){
 	//要素の指定、置換する数（０の場合は置換しない）、置換する内容
 		myArray.Splice(1,0,"hoge");
 		
-		print(myArray+"配列の数"+myArray.length);
+		print(myArray+"配列の数"+myArray.length+myArray);
 	}
+	
 }

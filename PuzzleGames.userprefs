@@ -1,10 +1,11 @@
 ﻿<Properties>
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/Script/BallManager.js">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/Script/Shot.js">
     <Files>
-      <File FileName="Assets/Script/BallManager.js" Line="102" Column="39" />
-      <File FileName="Assets/Script/Ball.js" Line="69" Column="4" />
-      <File FileName="Assets/Script/Cannon.js" Line="13" Column="14" />
+      <File FileName="Assets/Script/BallManager.js" Line="179" Column="1" />
+      <File FileName="Assets/Script/Ball.js" Line="61" Column="28" />
+      <File FileName="Assets/Script/Cannon.js" Line="32" Column="35" />
+      <File FileName="Assets/Script/Shot.js" Line="63" Column="4" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
